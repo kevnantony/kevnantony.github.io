@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Kevin Antony" />
+  <title>Kevin Antony | Portfolio</title>
+  <link rel="stylesheet" href="src/reset.css" />
+  <link rel="stylesheet" href="src/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .social-icon {
+      margin-right: 0;
+      font-size: 1.5em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--line-height);
+      justify-content: center;
+    }
+    .gallery figure {
+      flex: 0 1 45%;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .gallery img {
+      max-height: 250px;
+      width: auto;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+    .social-links {
+      position: relative;
+      width: 100%;
+      height: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      overflow: hidden;
+    }
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+    }
+    .top-left {
+      justify-self: start;
+      align-self: start;
+      margin: 5px 0 0 5px;
+    }
+    .top-right {
+      justify-self: end;
+      align-self: start;
+      margin: 5px 5px 0 0;
+    }
+    .bottom-left {
+      justify-self: start;
+      align-self: end;
+      margin: 0 0 5px 5px;
+    }
+    .bottom-right {
+      justify-self: end;
+      align-self: end;
+      margin: 0 5px 5px 0;
+    }
+    .hobbies-grid {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .hobby-item {
+      text-align: center;
+      border: 1px solid var(--text-color);
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      overflow: hidden;
+      height: 60px;
+      width: 100px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .hobby-item h3 {
+      margin: 0;
+      font-size: 0.8em;
+      padding: 0;
+    }
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .contact-form .full-width {
+      grid-column: span 2;
+    }
+    .contact-form textarea {
+      height: 16em;
+      width: 100%;
+      resize: vertical;
+    }
+    .contact-form button {
+      grid-column: 2;
+      justify-self: end;
+      margin-top: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 20px;
+    }
+    .project-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .project-item h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+    .project-item p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .project-item .project-link {
+      margin-top: auto;
+      padding-top: 10px;
+    }
+    .project-title {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .project-description {
+      margin-bottom: 30px;
+    }
+    .project-link {
+      display: block;
+      margin-top: auto;
+    }
+    .project-dropdown {
+      margin-bottom: 15px;
+      border: 1px solid var(--text-color);
+    }
+    .project-title {
+      cursor: pointer;
+      padding: 10px;
+      margin: 0;
+      background-color: var(--background-color);
+      position: relative;
+    }
+    .project-title::after {
+      content: "+";
+      position: absolute;
+      right: 15px;
+    }
+    .project-title.active::after {
+      content: "-";
+    }
+    .project-content {
+      display: none;
+      padding: 15px;
+      border-top: 1px solid var(--text-color);
+    }
+    .project-content.show {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid var(--text-color);
+    }
+    .width-min {
+      width: 1%;
+      white-space: nowrap;
+    }
+    .width-auto {
+      width: auto;
+    }
+    .institution-column {
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+<table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <h1 class="title">Kevin Antony</h1>
+      <span class="subtitle">Software Developer & Machine Learning Engineer</span>
+    </td>
+    <th>Status</th>
+    <td class="width-min">Available</td>
+  </tr>
+  <tr>
+    <th>Updated</th>
+    <td class="width-min"><time style="white-space: pre;">March 2025</time></td>
+  </tr>
+  <tr>
+    <th class="width-min">Contact</th>
+    <td class="width-auto">
+      <a href="mailto:kevinantony.work@gmail.com">kevinantony.work@gmail.com</a><br/>
+      <a href="https://wa.me/917559044582">+91 7559044582</a>
+    </td>
+    <th class="width-min">Links</th>
+    <td>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/kevin-antony" class="top-left"><i class="bi bi-linkedin social-icon"></i></a>
+        <a href="https://github.com/kevnantony" class="top-right"><i class="bi bi-github social-icon"></i></a>
+        <a href="https://x.com/kevnantony" class="bottom-left"><i class="bi bi-twitter social-icon"></i></a>
+        <a href="resume/KevinAntonyResumeMLEngineer.pdf" class="bottom-right"><i class="bi bi-file-earmark-pdf social-icon"></i></a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contents</h2>
+<ul class="incremental">
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#experience" id="toc-experience">Experience</a></li>
+<li><a href="#education" id="toc-education">Education</a></li>
+<li><a href="#projects" id="toc-projects">Projects</a></li>
+<li><a href="#skills" id="toc-skills">Technical Skills</a></li>
+<li><a href="#hobbies" id="toc-hobbies">Hobbies & Interests</a></li>
+<li><a href="#gallery" id="toc-gallery">Gallery</a></li>
+<li><a href="#contact" id="toc-contact">Contact</a></li>
+</ul>
+</nav>
+
+<h2 id="introduction">Introduction</h2>
+<p>
+  Software Engineer & Machine Learning Engineer with experience in AI/ML,
+  product management, and data-driven decision making. Passionate about
+  developing tech that people love to use.
+</p>
+
+<h2 id="experience">Experience</h2>
+
+<table>
+<thead>
+<tr>
+<th class="width-min">
+Position
+</th>
+<th class="width-auto">
+Responsibilities
+</th>
+<th class="width-min">
+Duration
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Machine Learning Engineer</strong><br/>
+<a href="https://pixlr.com/" target="_blank">Pixlr</a><br/>
+<em>Singapore</em>
+</td>
+<td>
+• Worked with Flux, Stable Diffusion Models, Diffusers, Transformers, LLMs, LoRAs, RAG, Inpainting, and Controlnets<br/>
+• Spearheaded R&D of AI products from POC to commercialization<br/>
+• Engineered AI technologies for image processing, generative AI, NLP, NLG, and NLU<br/>
+• Championed agile scrum methodology for enhanced team efficiency
+</td>
+<td>
+Aug 2024 - Present
+</td>
+</tr>
+<tr>
+<td>
+<strong>Product Manager</strong><br/>
+<a href="https://www.30sundays.club/" target="_blank">Brance</a><br/>
+<em>New Delhi</em>
+</td>
+<td>
+• Built and executed complex SQL queries for ETL processes<br/>
+• Developed 15+ business intelligence dashboards using GCP tools<br/>
+• Directed Product Operations, optimizing product efficiency by 25%<br/>
+• Led research initiatives including response time analysis and competitive benchmarking<br/>
+• Designed conversational flows and spearheaded technical development
+</td>
+<td>
+Dec 2023 - May 2024
+</td>
+</tr>
+<tr>
+<td>
+<strong>Software Engineer (ML & GenAI)</strong><br/>
+<a href="http://www.ancrypto.io" target="_blank">AnCrypto</a><br/>
+<em>Chandigarh</em>
+</td>
+<td>
+• Developed a Generative AI assistant using LangChain, Chroma vector store, and OpenAI embeddings<br/>
+• Engineered a Time-Series forecasting toolkit with LSTM, XGBoost, ARIMA, and Prophet models<br/>
+• Enhanced document indexing and similarity matching by 39%
+</td>
+<td>
+Jun 2023 - Aug 2023
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="education">Education</h2>
+
+<table>
+<thead>
+<tr>
+<th class="width-min institution-column">
+Institution
+</th>
+<th class="width-auto">
+Degree
+</th>
+<th class="width-min">
+Duration
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Dr. B R Ambedkar National Institute of Technology<br/>
+<em>Jalandhar, India</em>
+</td>
+<td>
+Bachelor of Technology in Computer Science & Engineering<br/>
+<em>Top 10% of Graduating Batch</em>
+</td>
+<td>
+Dec 2020 - Jun 2024
+</td>
+</tr>
+<tr>
+<td>
+Indian School Al Ghubra<br/>
+<em>Muscat, Oman</em>
+</td>
+<td>
+Central Board Of Secondary Education<br/>
+<em>Class X: 87%, Class XII: 90%</em>
+</td>
+<td>
+May 2018 - May 2020
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="projects">Projects</h2>
+
+<div class="project-dropdown">
+  <h3 class="project-title">PhishNet: Phishing Websites Detection Tool</h3>
+  <div class="project-content">
+    <p>
+      This project employs advanced machine learning and data science techniques, including feature extraction and XGBoost to predict phishing websites.
+    </p>
+    <p><a href="https://arxiv.org/abs/2407.04732">View on arXiv</a></p>
+  </div>
+</div>
+
+<div class="project-dropdown">
+  <h3 class="project-title">Blockchain-based Petition System</h3>
+  <div class="project-content">
+    <p>
+      Proposed a blockchain-based decentralized petition system to enhance transparency, security, and democratization in petition and voting processes, eliminating the need for intermediaries.
+    </p>
+    <p><a href="https://arxiv.org/abs/2407.00534">View on arXiv</a></p>
+  </div>
+</div>
+
+<script>
+  // Add click event listeners for project dropdowns
+  document.addEventListener('DOMContentLoaded', () => {
+    const projectTitles = document.querySelectorAll('.project-title');
+    projectTitles.forEach(title => {
+      title.addEventListener('click', () => {
+        title.classList.toggle('active');
+        const content = title.nextElementSibling;
+        content.classList.toggle('show');
+      });
+    });
+    
+    // Show the first project by default
+    if (projectTitles.length > 0) {
+      projectTitles[0].classList.add('active');
+      projectTitles[0].nextElementSibling.classList.add('show');
+    }
+  });
+</script>
+
+<h2 id="skills">Technical Skills</h2>
+
+<p><strong>Languages:</strong> Python, C/C++, SQL, R, Rust</p>
+
+<p><strong>Libraries & Databases:</strong> PyTorch, NumPy, FastAPI, MySQL, PostgreSQL, Ray, Redis, BigQuery</p>
+
+<p><strong>Tools & Others:</strong> Google Cloud Platform (GCP), Amazon Web Services (AWS), Git, Docker, Linux, JIRA, Advanced Excel, Looker Studio</p>
+
+<h2 id="hobbies">Hobbies & Interests</h2>
+
+<div class="hobbies-grid">
+  <div class="hobby-item">
+    <h3>Trekking</h3>
+  </div>
+  <div class="hobby-item">
+    <h3>Football</h3>
+  </div>
+  <div class="hobby-item">
+    <h3>Chess</h3>
+  </div>
+</div>
+
+<h2 id="gallery">Gallery</h2>
+<p>A glimpse into my travels:</p>
+
+<div class="gallery">
+  <figure>
+    <img src="demo/IMG-20250228-WA0003.jpg" alt="Zero Point, border of Kashmir and Ladakh" />
+    <figcaption>Zero Point, Kashmir-Ladakh border</figcaption>
+  </figure>
+  <figure>
+    <img src="demo/IMG_1808.jpg" alt="Kheerganaga, Himachal Pradesh" style="max-width: 100%;" />
+    <figcaption>Kheerganaga, Himachal Pradesh</figcaption>
+  </figure>
+</div>
+
+<h2 id="contact">Contact</h2>
+<p>I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
+
+<form class="contact-form">
+  <label>Name
+  <input type="text" placeholder="Your name..." /></label>
+  <label>Email
+  <input type="text" placeholder="Your email..." /></label>
+  <label class="full-width">Message
+  <textarea placeholder="Your message..." rows="16"></textarea></label>
+  <button type="button">Send Message</button>
+</form>
+
+<p>Or reach me directly:</p>
+
+<p><i class="bi bi-envelope"></i> Email: <a href="mailto:kevinantony.work@gmail.com">kevinantony.work@gmail.com</a></p>
+<p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/kevin-antony">linkedin.com/in/kevin-antony</a></p>
+<p><i class="bi bi-github"></i> GitHub: <a href="https://github.com/kevnantony">github.com/kevnantony</a></p>
+<p><i class="bi bi-twitter"></i> Twitter: <a href="https://x.com/kevnantony">x.com/kevnantony</a></p>
+
+<hr>
+<p>© 2025 Kevin Antony. All rights reserved.</p>
+
+<p style="font-size: 0.7em; text-align: center; color: #666;">Based on <a href="https://github.com/owickstrom/the-monospace-web" style="color: #666;">The Monospace Web</a> by Oskar Wickström</p>
+
+<div class="debug-grid"></div>
+<script src="src/index.js"></script>
+</body>
+</html>
