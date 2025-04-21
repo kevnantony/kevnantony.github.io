@@ -451,14 +451,20 @@ May 2018 - May 2020
 <h2 id="contact">Contact</h2>
 <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
 
-<form class="contact-form">
+<div id="success-message" style="display:none; color: #4BB543; margin-bottom: 1em;">
+  Thank you! Your message has been sent.
+</div>
+<form class="contact-form" action="https://getform.io/f/ajjmgyoa" method="POST">
   <label>Name
-  <input type="text" placeholder="Your name..." /></label>
+    <input type="text" name="name" placeholder="Your name..." required />
+  </label>
   <label>Email
-  <input type="text" placeholder="Your email..." /></label>
+    <input type="email" name="email" placeholder="Your email..." required />
+  </label>
   <label class="full-width">Message
-  <textarea placeholder="Your message..." rows="16"></textarea></label>
-  <button type="button">Send Message</button>
+    <textarea name="message" placeholder="Your message..." rows="16" required></textarea>
+  </label>
+  <button type="submit">Send Message</button>
 </form>
 
 <p>Or reach me directly:</p>
@@ -475,5 +481,31 @@ May 2018 - May 2020
 
 <div class="debug-grid"></div>
 <script src="src/index.js"></script>
+<script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var data = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(function(response) {
+    if (response.ok) {
+      document.getElementById('success-message').style.display = 'block';
+      form.reset();
+    } else {
+      response.json().then(function(data) {
+        alert(data.error || 'Oops! There was a problem submitting your form');
+      });
+    }
+  }).catch(function(error) {
+    alert('Oops! There was a problem submitting your form');
+  });
+});
+</script>
 </body>
 </html>
