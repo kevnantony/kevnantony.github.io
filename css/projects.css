@@ -1,0 +1,76 @@
+/* Projects and grid layouts */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 20px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.project-item p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.project-item .project-link {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  margin-bottom: 30px;
+}
+
+.project-link {
+  display: block;
+  margin-top: auto;
+}
+
+.project-dropdown {
+  margin-bottom: 15px;
+  border: 1px solid var(--text-color);
+}
+
+.project-title {
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.project-title::after {
+  content: "+";
+  position: absolute;
+  right: 15px;
+}
+
+.project-title.active::after {
+  content: "-";
+}
+
+.project-content {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid var(--text-color);
+}
+
+.project-content.show {
+  display: block;
+}

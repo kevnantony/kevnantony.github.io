@@ -14,16 +14,16 @@ function adjustMediaPadding() {
   const cell = gridCellDimensions();
 
   function setHeightFromRatio(media, ratio) {
-      const rect = media.getBoundingClientRect();
-      const realHeight = rect.width / ratio;
-      const diff = cell.height - (realHeight % cell.height);
-      media.style.setProperty("padding-bottom", `${diff}px`);
+    const rect = media.getBoundingClientRect();
+    const realHeight = rect.width / ratio;
+    const diff = cell.height - (realHeight % cell.height);
+    media.style.setProperty("padding-bottom", `${diff}px`);
   }
 
   function setFallbackHeight(media) {
-      const rect = media.getBoundingClientRect();
-      const height = Math.round((rect.width / 2) / cell.height) * cell.height;
-      media.style.setProperty("height", `${height}px`);
+    const rect = media.getBoundingClientRect();
+    const height = Math.round(rect.width / 2 / cell.height) * cell.height;
+    media.style.setProperty("height", `${height}px`);
   }
 
   function onMediaLoaded(media) {
@@ -53,8 +53,8 @@ function adjustMediaPadding() {
           onMediaLoaded(media);
         } else {
           media.addEventListener("load", () => onMediaLoaded(media));
-          media.addEventListener("error", function() {
-              setFallbackHeight(media);
+          media.addEventListener("error", function () {
+            setFallbackHeight(media);
           });
         }
         break;
@@ -67,7 +67,7 @@ function adjustMediaPadding() {
             break;
           default:
             media.addEventListener("loadeddata", () => onMediaLoaded(media));
-            media.addEventListener("error", function() {
+            media.addEventListener("error", function () {
               setFallbackHeight(media);
             });
             break;
@@ -91,7 +91,9 @@ function checkOffsets() {
     "TH",
   ]);
   const cell = gridCellDimensions();
-  const elements = document.querySelectorAll("body :not(.debug-grid, .debug-toggle)");
+  const elements = document.querySelectorAll(
+    "body :not(.debug-grid, .debug-toggle)",
+  );
   for (const element of elements) {
     if (ignoredTagNames.has(element.tagName)) {
       continue;
@@ -103,9 +105,16 @@ function checkOffsets() {
     const top = rect.top + window.scrollY;
     const left = rect.left + window.scrollX;
     const offset = top % (cell.height / 2);
-    if(offset > 0) {
+    if (offset > 0) {
       element.classList.add("off-grid");
-      console.error("Incorrect vertical offset for", element, "with remainder", top % cell.height, "when expecting divisible by", cell.height / 2);
+      console.error(
+        "Incorrect vertical offset for",
+        element,
+        "with remainder",
+        top % cell.height,
+        "when expecting divisible by",
+        cell.height / 2,
+      );
     } else {
       element.classList.remove("off-grid");
     }

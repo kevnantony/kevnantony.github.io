@@ -1,0 +1,100 @@
+/* Navigation and tree styles */
+
+/* Tree list customization */
+.tree small {
+  display: block;
+  font-style: italic;
+  color: var(--text-color-alt);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.tree li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 1.5ch;
+  margin-left: 1.5ch;
+  border-left: var(--border-thickness) solid var(--text-color);
+}
+
+.tree li:before {
+  position: absolute;
+  display: block;
+  top: calc(var(--line-height) / 2);
+  left: 0;
+  content: "";
+  width: 1ch;
+  border-bottom: var(--border-thickness) solid var(--text-color);
+}
+
+.tree li:last-child {
+  border-left: none;
+}
+
+.tree li:last-child:after {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: "";
+  height: calc(var(--line-height) / 2);
+  border-left: var(--border-thickness) solid var(--text-color);
+}
+
+.tree a {
+  font-weight: var(--font-weight-medium);
+}
+
+/* Ensure TOC blog item has proper bullet */
+nav#TOC ul.incremental > li {
+  list-style-type: square;
+}
+
+/* Reset specific blog list item styles to maintain bullet */
+nav#TOC ul.incremental > li:last-child {
+  border-left: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+nav#TOC ul.incremental > li:last-child:before,
+nav#TOC ul.incremental > li:last-child:after {
+  display: none;
+}
+
+/* Style nested tree in TOC specifically */
+nav#TOC .tree {
+  margin-top: 5px;
+}
+
+nav#TOC .tree li {
+  position: relative;
+  padding-left: 1.5ch;
+  margin-left: 1.5ch;
+  border-left: var(--border-thickness) solid var(--text-color);
+  list-style-type: none;
+}
+
+nav#TOC .tree li:before {
+  position: absolute;
+  display: block;
+  top: calc(var(--line-height) / 2);
+  left: 0;
+  content: "";
+  width: 1ch;
+  border-bottom: var(--border-thickness) solid var(--text-color);
+}
+
+nav#TOC .tree li:last-child {
+  border-left: none;
+}
+
+nav#TOC .tree li:last-child:after {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: "";
+  height: calc(var(--line-height) / 2);
+  border-left: var(--border-thickness) solid var(--text-color);
+}

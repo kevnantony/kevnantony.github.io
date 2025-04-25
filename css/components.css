@@ -1,0 +1,147 @@
+/* Component-specific styles */
+
+/* Social icons and links */
+.social-icon {
+  margin-right: 0;
+  font-size: 1.5em;
+}
+.social-links {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.top-left {
+  justify-self: start;
+  align-self: start;
+  margin: 5px 0 0 5px;
+}
+.top-right {
+  justify-self: end;
+  align-self: start;
+  margin: 5px 5px 0 0;
+}
+.bottom-left {
+  justify-self: start;
+  align-self: end;
+  margin: 0 0 5px 5px;
+}
+.bottom-right {
+  justify-self: end;
+  align-self: end;
+  margin: 0 5px 5px 0;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--line-height);
+  justify-content: center;
+}
+.gallery figure {
+  flex: 0 1 45%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.gallery img {
+  max-height: 250px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hobbies grid */
+.hobbies-grid {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.hobby-item {
+  text-align: center;
+  border: 1px solid var(--text-color);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  height: 60px;
+  width: 100px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hobby-item h3 {
+  margin: 0;
+  font-size: 0.8em;
+  padding: 0;
+}
+
+/* Contact form */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  margin: 20px 0;
+}
+.contact-form .full-width {
+  grid-column: span 2;
+}
+.contact-form textarea {
+  height: 16em;
+  width: 100%;
+  resize: vertical;
+}
+.contact-form button {
+  grid-column: 2;
+  justify-self: end;
+  margin-top: 10px;
+}
+#success-message {
+  display: none;
+  color: #4bb543;
+  margin-bottom: 1em;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--text-color);
+}
+.width-min {
+  width: 1%;
+  white-space: nowrap;
+}
+.width-auto {
+  width: auto;
+}
+.institution-column {
+  width: 30%;
+}

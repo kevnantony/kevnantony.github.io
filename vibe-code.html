@@ -1,0 +1,304 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta name="author" content="Kevin Antony" />
+    <title>
+      How I Learned to Stop Worrying and Love the Vibe Code | Kevin Antony
+    </title>
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+      .social-icon {
+        margin-right: 0;
+        font-size: 1.5em;
+      }
+      .social-links {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        overflow: hidden;
+      }
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+      }
+      .top-left {
+        justify-self: start;
+        align-self: start;
+        margin: 5px 0 0 5px;
+      }
+      .top-right {
+        justify-self: end;
+        align-self: start;
+        margin: 5px 5px 0 0;
+      }
+      .bottom-left {
+        justify-self: start;
+        align-self: end;
+        margin: 0 0 5px 5px;
+      }
+      .bottom-right {
+        justify-self: end;
+        align-self: end;
+        margin: 0 5px 5px 0;
+      }
+      .blog-content {
+        margin-top: 2rem;
+      }
+      .blog-content h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .blog-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+      .blog-content ul {
+        margin-bottom: 1.5rem;
+        padding-left: 2ch;
+      }
+      .blog-content li {
+        margin-bottom: 0.7rem;
+        line-height: 1.5;
+      }
+      .blog-footer {
+        margin-top: 3rem;
+        font-style: italic;
+      }
+      .back-link {
+        margin-bottom: 2rem;
+      }
+      .emoji-heading {
+        margin-left: 0.5ch;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="header">
+      <tr>
+        <td colspan="2" rowspan="2" class="width-auto">
+          <h1 class="title">Kevin Antony</h1>
+          <span class="subtitle"
+            >Software Developer & Machine Learning Engineer</span
+          >
+        </td>
+        <th>Status</th>
+        <td class="width-min">Available</td>
+      </tr>
+      <tr>
+        <th>Updated</th>
+        <td class="width-min"><time style="white-space: pre">03.2025</time></td>
+      </tr>
+      <tr>
+        <th class="width-min">Contact</th>
+        <td class="width-auto">
+          <a href="mailto:kevinantony.work@gmail.com"
+            >kevinantony.work@gmail.com</a
+          ><br />
+          <a href="https://wa.me/917559044582">+91-7559044582</a><br />
+          <span style="font-size: 0.9em"
+            >📍 Mostly by the beach 🌴 @
+            <a
+              href="https://www.keralatourism.org/kochi/fort-kochi-beach.php"
+              target="_blank"
+              >Kerala, India</a
+            ></span
+          >
+        </td>
+        <th class="width-min">Links</th>
+        <td>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/kevin-antony" class="top-left"
+              ><i class="bi bi-linkedin social-icon"></i
+            ></a>
+            <a href="https://github.com/kevnantony" class="top-right"
+              ><i class="bi bi-github social-icon"></i
+            ></a>
+            <a href="https://x.com/kevnantony" class="bottom-left"
+              ><i class="bi bi-twitter social-icon"></i
+            ></a>
+            <a
+              href="resume/KevinAntonyResumeMLEngineer.pdf"
+              class="bottom-right"
+              ><i class="bi bi-file-earmark-pdf social-icon"></i
+            ></a>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <label class="debug-toggle-label"
+      ><input type="checkbox" class="debug-toggle" /> Debug mode</label
+    >
+
+    <p class="back-link"><a href="index.html">← Back to my stuff</a></p>
+
+    <h1>How I Learned to Stop Worrying and Love the Vibe Code</h1>
+
+    <div class="blog-content">
+      <p>
+        Recently, I stumbled on the idea of <strong>vibe coding</strong> — a
+        phrase that immediately resonated. I had just joined a new org and got
+        access to Cursor. Around the same time, I watched a YC video where the
+        founder casually dropped, "I don't really code anymore. I vibe with my
+        code." That line stuck.
+      </p>
+
+      <p>
+        At first, it sounded like a joke. But the more I thought about it, the
+        more it made sense. Vibe coding isn't about slacking — it's about
+        working at a higher level of abstraction. Less keyboard, more intent.
+      </p>
+
+      <h2>What is vibe coding? <span class="emoji-heading">🌀</span></h2>
+      <p>
+        It's not just writing code — it's orchestrating it. You act like a
+        creative director. The AI becomes your co-builder. You sketch the idea,
+        it helps fill in the details. You're solving problems by shaping
+        conversations, not just by typing fast.
+      </p>
+
+      <h2>How I started vibing <span class="emoji-heading">🧠</span></h2>
+      <ul>
+        <li>Writing small tests first — made my intent clearer, faster.</li>
+        <li>
+          Thinking in clean chunks — easier for both me and the AI to iterate.
+        </li>
+        <li>Prompting often — rough ideas in, refined code out.</li>
+        <li>Debugging like chatting — errors turned into dialog.</li>
+        <li>
+          Feeding it more — comments, logs, and plan-of-action helped it help
+          me.
+        </li>
+      </ul>
+
+      <h2>
+        It's still work, just better <span class="emoji-heading">⚙️</span>
+      </h2>
+      <p>
+        You're still in control. The AI won't replace deep thought. But when
+        you're in the zone, it's like pair programming with someone fast,
+        tireless, and weirdly intuitive.
+      </p>
+
+      <p>
+        I'm still learning — but I don't code like a machine anymore. I vibe
+        with my code now. And honestly, it feels good.
+      </p>
+
+      <h2>TL;DR <span class="emoji-heading">🧩</span></h2>
+      <p>
+        <strong>Vibe coding</strong> is about working with AI as a thinking
+        partner — less typing, more intention. Treat your editor like a canvas,
+        your prompts like design notes, and the code will follow.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <h2 id="contact">Contact</h2>
+    <p>Got a cool project or just want to chat about tech? I'm all ears!</p>
+
+    <div id="success-message">
+      Thanks! Got your message. I'll get back to you soon.
+    </div>
+    <form
+      class="contact-form"
+      action="https://getform.io/f/ajjmgyoa"
+      method="POST"
+    >
+      <label
+        >Name
+        <input
+          type="text"
+          name="name"
+          placeholder="What should I call you?"
+          required
+        />
+      </label>
+      <label
+        >Email
+        <input
+          type="email"
+          name="email"
+          placeholder="Where can I reach you?"
+          required
+        />
+      </label>
+      <label class="full-width"
+        >Message
+        <textarea
+          name="message"
+          placeholder="What's on your mind?"
+          rows="16"
+          required
+        ></textarea>
+      </label>
+      <button type="submit">Send it my way</button>
+    </form>
+
+    <p>Or just reach out directly:</p>
+
+    <p>
+      <i class="bi bi-envelope"></i> Email:
+      <a href="mailto:kevinantony.work@gmail.com">kevinantony.work@gmail.com</a>
+    </p>
+    <p>
+      <i class="bi bi-linkedin"></i> LinkedIn:
+      <a href="https://linkedin.com/in/kevin-antony"
+        >linkedin.com/in/kevin-antony</a
+      >
+    </p>
+    <p>
+      <i class="bi bi-github"></i> GitHub:
+      <a href="https://github.com/kevnantony">github.com/kevnantony</a>
+    </p>
+    <p>
+      <i class="bi bi-twitter"></i> Twitter:
+      <a href="https://x.com/kevnantony">x.com/kevnantony</a>
+    </p>
+
+    <div class="blog-footer">
+      <p>Posted March 2025 | By Kevin Antony</p>
+    </div>
+
+    <hr />
+    <p>© 2025 Kevin Antony. All rights reserved.</p>
+
+    <p style="font-size: 0.7em; color: #666; margin-top: 0.5em">
+      I usually go by "kevnantony" on all platforms.
+    </p>
+
+    <p style="font-size: 0.7em; text-align: center; color: #666">
+      Based on
+      <a
+        href="https://github.com/owickstrom/the-monospace-web"
+        style="color: #666"
+        >The Monospace Web</a
+      >
+      by Oskar Wickström
+    </p>
+
+    <div class="debug-grid"></div>
+    <script src="src/index.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
