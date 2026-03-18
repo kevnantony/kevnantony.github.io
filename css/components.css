@@ -5,6 +5,7 @@
   margin-right: 0;
   font-size: 1.5em;
 }
+
 .social-links {
   position: relative;
   width: 100%;
@@ -15,6 +16,7 @@
   gap: 0;
   overflow: hidden;
 }
+
 .social-links a {
   display: flex;
   align-items: center;
@@ -23,21 +25,25 @@
   max-height: 100%;
   overflow: hidden;
 }
+
 .top-left {
   justify-self: start;
   align-self: start;
   margin: 5px 0 0 5px;
 }
+
 .top-right {
   justify-self: end;
   align-self: start;
   margin: 5px 5px 0 0;
 }
+
 .bottom-left {
   justify-self: start;
   align-self: end;
   margin: 0 0 5px 5px;
 }
+
 .bottom-right {
   justify-self: end;
   align-self: end;
@@ -51,6 +57,7 @@
   gap: var(--line-height);
   justify-content: center;
 }
+
 .gallery figure {
   flex: 0 1 45%;
   min-width: 200px;
@@ -59,6 +66,7 @@
   align-items: center;
   text-align: center;
 }
+
 .gallery img {
   max-height: 250px;
   width: auto;
@@ -76,6 +84,7 @@
   align-items: center;
   flex-wrap: nowrap;
 }
+
 .hobby-item {
   text-align: center;
   border: 1px solid var(--text-color);
@@ -90,6 +99,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .hobby-item h3 {
   margin: 0;
   font-size: 0.8em;
@@ -104,19 +114,23 @@
   gap: 15px;
   margin: 20px 0;
 }
+
 .contact-form .full-width {
   grid-column: span 2;
 }
+
 .contact-form textarea {
   height: 16em;
   width: 100%;
   resize: vertical;
 }
+
 .contact-form button {
   grid-column: 2;
   justify-self: end;
   margin-top: 10px;
 }
+
 #success-message {
   display: none;
   color: #4bb543;
@@ -128,6 +142,7 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+
 th,
 td {
   padding: 10px;
@@ -135,13 +150,16 @@ td {
   vertical-align: top;
   border: 1px solid var(--text-color);
 }
+
 .width-min {
   width: 1%;
   white-space: nowrap;
 }
+
 .width-auto {
   width: auto;
 }
+
 .institution-column {
   width: 30%;
 }
@@ -153,24 +171,19 @@ td {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: calc(var(--line-height) * 2);
+  grid-template-columns: 1fr;
+  gap: calc(var(--line-height) * 1.5);
   margin-bottom: calc(var(--line-height) * 3);
 }
-.skills-grid > div {
+
+.skills-grid>div {
   border-top: var(--border-thickness) dashed var(--text-color);
   padding-top: calc(var(--line-height) / 2);
 }
+
 .skills-grid p {
   margin-top: calc(var(--line-height) / 2);
   margin-bottom: 0;
-}
-
-@media screen and (max-width: 600px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: var(--line-height);
-  }
 }
 
 .social-links a:hover,
@@ -178,6 +191,7 @@ td {
   background: var(--text-color);
   color: var(--background-color);
 }
+
 .social-links a:hover .social-icon {
   color: var(--background-color);
 }
