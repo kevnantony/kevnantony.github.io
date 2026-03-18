@@ -176,10 +176,6 @@ td {
   margin-bottom: calc(var(--line-height) * 3);
 }
 
-.skills-grid>div {
-  border-top: var(--border-thickness) dashed var(--text-color);
-  padding-top: calc(var(--line-height) / 2);
-}
 
 .skills-grid p {
   margin-top: calc(var(--line-height) / 2);
