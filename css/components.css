@@ -145,3 +145,39 @@ td {
 .institution-column {
   width: 30%;
 }
+
+/* Enhancements */
+.text-alt {
+  color: var(--text-color-alt);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--line-height) * 2);
+  margin-bottom: calc(var(--line-height) * 3);
+}
+.skills-grid > div {
+  border-top: var(--border-thickness) dashed var(--text-color);
+  padding-top: calc(var(--line-height) / 2);
+}
+.skills-grid p {
+  margin-top: calc(var(--line-height) / 2);
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--line-height);
+  }
+}
+
+.social-links a:hover,
+.project-title:hover {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+.social-links a:hover .social-icon {
+  color: var(--background-color);
+}
