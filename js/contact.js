@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const form = this;
       const data = new FormData(form);
 
+      // Get language-aware error message
+      function getErrorMsg(serverMsg) {
+        const lang = localStorage.getItem("lang") || "en";
+        if (lang === "de") {
+          return serverMsg || "Beim Absenden deiner Nachricht ist ein Fehler aufgetreten.";
+        }
+        return serverMsg || "Oops! There was a problem submitting your form";
+      }
+
       fetch(form.action, {
         method: "POST",
         body: data,
@@ -20,14 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
             form.reset();
           } else {
             response.json().then(function (data) {
-              alert(
-                data.error || "Oops! There was a problem submitting your form",
-              );
+              alert(getErrorMsg(data.error));
             });
           }
         })
-        .catch(function (error) {
-          alert("Oops! There was a problem submitting your form");
+        .catch(function () {
+          alert(getErrorMsg(null));
         });
     });
   }

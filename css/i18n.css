@@ -1,0 +1,70 @@
+/* ─── Language Toggle Pill ───────────────────────────────────────────────────── */
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: var(--border-thickness) solid var(--text-color);
+  border-radius: 2px;
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  margin-left: auto;
+  vertical-align: middle;
+  /* Keep it visually compact and monospace-native */
+  user-select: none;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.18em 0.7em;
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: var(--line-height);
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.lang-btn:first-child {
+  border-right: var(--border-thickness) solid var(--text-color);
+}
+
+.lang-btn:hover {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+.lang-btn.active {
+  background: var(--text-color);
+  color: var(--background-color);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Animate text swaps: brief fade-out/in on translatable elements */
+[data-i18n],
+[data-i18n-placeholder] {
+  transition: opacity 0.12s ease;
+}
+
+.lang-switching [data-i18n],
+.lang-switching [data-i18n-placeholder] {
+  opacity: 0;
+}
+
+/* Wrapper row for the toggle — sits below the debug toggle, right-aligned */
+.lang-toggle-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.4em;
+}

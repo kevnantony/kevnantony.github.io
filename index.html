@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/projects.css" />
   <link rel="stylesheet" href="css/navigation.css" />
+  <link rel="stylesheet" href="css/i18n.css" />
 
   <!-- External Resources -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
@@ -26,23 +27,23 @@
     <tr>
       <td colspan="2" rowspan="2" class="width-auto">
         <h1 class="title">Kevin Antony</h1>
-        <span class="subtitle">ML/AI & Backend Engineer | M.Sc. Computer Science Student</span>
+        <span class="subtitle" data-i18n="subtitle">ML/AI &amp; Backend Engineer | M.Sc. Computer Science Student</span>
       </td>
-      <th>Status</th>
-      <td class="width-min">Available</td>
+      <th data-i18n="status_label">Status</th>
+      <td class="width-min" data-i18n="status_value">Available</td>
     </tr>
     <tr>
-      <th>Updated</th>
+      <th data-i18n="updated_label">Updated</th>
       <td class="width-min"><time style="white-space: pre">03.2026</time></td>
     </tr>
     <tr>
-      <th class="width-min">Contact</th>
+      <th class="width-min" data-i18n="contact_label">Contact</th>
       <td class="width-auto">
         <a href="mailto:kevinantony.work@gmail.com">kevinantony.work@gmail.com</a><br />
-        <a href="https://wa.me/917559044582">+91-7559044582</a><br />
+        <a href="https://wa.me/4915151456775">+49-15151456775</a><br />
         <span style="font-size: 0.9em">📍 Hannover, DE 🇩🇪</span>
       </td>
-      <th class="width-min">Links</th>
+      <th class="width-min" data-i18n="links_label">Links</th>
       <td>
         <div class="social-links">
           <a href="https://linkedin.com/in/kevin-antony" class="top-left"><i class="bi bi-linkedin social-icon"></i></a>
@@ -57,18 +58,26 @@
 
   <label class="debug-toggle-label"><input type="checkbox" class="debug-toggle" /> Debug mode</label>
 
+  <!-- Language Toggle -->
+  <div class="lang-toggle-row">
+    <div class="lang-toggle" role="group" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" id="lang-en" aria-pressed="true">🇬🇧 EN</button>
+      <button class="lang-btn" data-lang="de" id="lang-de" aria-pressed="false">🇩🇪 DE</button>
+    </div>
+  </div>
+
   <!-- Navigation/Contents -->
   <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Contents</h2>
+    <h2 id="toc-title" data-i18n="toc_title">Contents</h2>
     <ul class="incremental">
-      <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-      <li><a href="#experience" id="toc-experience">Experience</a></li>
-      <li><a href="#education" id="toc-education">Education</a></li>
-      <li><a href="#projects" id="toc-projects">Projects</a></li>
-      <li><a href="#skills" id="toc-skills">Technical Skills</a></li>
-      <li><a href="#hobbies" id="toc-hobbies">Hobbies & Interests</a></li>
-      <li><a href="#gallery" id="toc-gallery">Gallery</a></li>
-      <li><a href="#contact" id="toc-contact">Contact</a></li>
+      <li><a href="#introduction" id="toc-introduction" data-i18n="nav_intro">Introduction</a></li>
+      <li><a href="#experience" id="toc-experience" data-i18n="nav_experience">Experience</a></li>
+      <li><a href="#education" id="toc-education" data-i18n="nav_education">Education</a></li>
+      <li><a href="#projects" id="toc-projects" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#skills" id="toc-skills" data-i18n="nav_skills">Technical Skills</a></li>
+      <li><a href="#hobbies" id="toc-hobbies" data-i18n="nav_hobbies">Hobbies &amp; Interests</a></li>
+      <li><a href="#gallery" id="toc-gallery" data-i18n="nav_gallery">Gallery</a></li>
+      <li><a href="#contact" id="toc-contact" data-i18n="nav_contact">Contact</a></li>
       <li>
         Blog
         <ul class="tree">
@@ -82,187 +91,197 @@
   </nav>
 
   <!-- Introduction -->
-  <h2 id="introduction">Introduction</h2>
-  <p>
-    Hey there! I'm an ML/AI & Backend Engineer with 2 years of experience building and scaling production-grade AI
+  <h2 id="introduction" data-i18n="intro_heading">Introduction</h2>
+  <p data-i18n="intro_body">
+    Hey there! I'm an ML/AI &amp; Backend Engineer with 2 years of experience building and scaling production-grade AI
     systems. Currently pursuing an M.Sc. in Computer Science at Leibniz Universität Hannover, I love architecting
     high-performance cloud infrastructure and delivering end-to-end AI solutions.
   </p>
 
   <!-- Experience -->
-  <h2 id="experience">Experience</h2>
+  <h2 id="experience" data-i18n="exp_heading">Experience</h2>
 
   <table>
     <thead>
       <tr>
-        <th class="width-min">Position</th>
-        <th class="width-auto">Responsibilities</th>
-        <th class="width-min">Duration</th>
+        <th class="width-min" data-i18n="exp_col_pos">Position</th>
+        <th class="width-auto" data-i18n="exp_col_resp">Responsibilities</th>
+        <th class="width-min" data-i18n="exp_col_dur">Duration</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
-          <strong>Software Engineer (AI & Backend)</strong><br />
-          <span>Various Startups</span><br />
-          <em class="text-alt">Remote • AnCrypto, 30 Sundays, Dippy AI, YRAL</em>
+          <strong data-i18n="exp1_role">Software Engineer (AI &amp; Backend)</strong><br />
+          <span data-i18n="exp1_company">Various Startups</span><br />
+          <em class="text-alt" data-i18n="exp1_location">Remote • AnCrypto, 30 Sundays, Dippy AI, YRAL</em>
         </td>
         <td>
-          • Built and scaled Python backend systems (FastAPI, SQLAlchemy) for AI products supporting up to 1M+
-          users.<br />
-          • Architected and deployed LLM and diffusion-based applications (chatbots, GenAI pipelines).<br />
-          • Designed cloud-native infrastructure on GCP (Docker, K8s, GKE) ensuring auto-scaling and high
-          availability.<br />
-          • Engineered data pipelines and caching (PostgreSQL, Redis, Elasticsearch, BigQuery).
+          <span data-i18n="exp1_bullet1">• Built and scaled Python backend systems (FastAPI, SQLAlchemy) for AI products
+            supporting up to 1M+
+            users.</span><br />
+          <span data-i18n="exp1_bullet2">• Architected and deployed LLM and diffusion-based applications (chatbots,
+            GenAI pipelines).</span><br />
+          <span data-i18n="exp1_bullet3">• Designed cloud-native infrastructure on GCP (Docker, K8s, GKE) ensuring
+            auto-scaling and high
+            availability.</span><br />
+          <span data-i18n="exp1_bullet4">• Engineered data pipelines and caching (PostgreSQL, Redis, Elasticsearch,
+            BigQuery).</span>
         </td>
-        <td class="text-alt">2023 - Present</td>
+        <td class="text-alt" data-i18n="exp1_duration">2023 - Present</td>
       </tr>
       <tr>
         <td>
-          <strong>Machine Learning Engineer</strong><br />
+          <strong data-i18n="exp2_role">Machine Learning Engineer</strong><br />
           <a href="https://pixlr.com/" target="_blank">Pixlr</a><br />
-          <em class="text-alt">Singapore (Remote)</em>
+          <em class="text-alt" data-i18n="exp2_location">Singapore (Remote)</em>
         </td>
         <td>
-          • Architected and deployed LLM and diffusion-model powered applications for AI content generation.<br />
-          • Built scalable Python backend services & REST APIs (OpenAPI) to serve AI models in production.<br />
-          • Designed load-balanced, cloud-native deployments on Google Cloud (GKE).
+          <span data-i18n="exp2_bullet1">• Architected and deployed LLM and diffusion-model powered applications for AI
+            content generation.</span><br />
+          <span data-i18n="exp2_bullet2">• Built scalable Python backend services &amp; REST APIs (OpenAPI) to serve AI
+            models in production.</span><br />
+          <span data-i18n="exp2_bullet3">• Designed load-balanced, cloud-native deployments on Google Cloud
+            (GKE).</span>
         </td>
-        <td class="text-alt">2024 - 2025</td>
+        <td class="text-alt" data-i18n="exp2_duration">2024 - 2025</td>
       </tr>
     </tbody>
   </table>
 
   <!-- Education -->
-  <h2 id="education">Education</h2>
+  <h2 id="education" data-i18n="edu_heading">Education</h2>
 
   <table>
     <thead>
       <tr>
-        <th class="width-min institution-column">Institution</th>
-        <th class="width-auto">Degree</th>
-        <th class="width-min">Duration</th>
+        <th class="width-min institution-column" data-i18n="edu_col_inst">Institution</th>
+        <th class="width-auto" data-i18n="edu_col_deg">Degree</th>
+        <th class="width-min" data-i18n="edu_col_dur">Duration</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
           <a href="https://www.uni-hannover.de/en/" target="_blank">Leibniz Universität Hannover</a><br />
-          <em class="text-alt">Hannover, Germany</em>
+          <em class="text-alt" data-i18n="edu1_location">Hannover, Germany</em>
         </td>
         <td>
-          Master of Science in Computer Science<br />
+          <span data-i18n="edu1_degree">Master of Science in Computer Science</span><br />
         </td>
-        <td class="text-alt">2026 - Present</td>
+        <td class="text-alt" data-i18n="edu1_duration">2026 - Present</td>
       </tr>
       <tr>
         <td>
           <a href="https://www.nitj.ac.in/" target="_blank">Dr. B R Ambedkar National Institute of Technology</a><br />
-          <em class="text-alt">Jalandhar, India</em>
+          <em class="text-alt" data-i18n="edu2_location">Jalandhar, India</em>
         </td>
         <td>
-          Bachelor of Technology in Computer Science & Engineering<br />
+          <span data-i18n="edu2_degree">Bachelor of Technology in Computer Science &amp; Engineering</span><br />
         </td>
-        <td class="text-alt">2020 - 2024</td>
+        <td class="text-alt" data-i18n="edu2_duration">2020 - 2024</td>
       </tr>
     </tbody>
   </table>
 
   <!-- Projects -->
-  <h2 id="projects">Projects</h2>
+  <h2 id="projects" data-i18n="proj_heading">Projects</h2>
 
   <div class="project-dropdown">
-    <h3 class="project-title">PhishNet: Phishing Websites Detection Tool</h3>
+    <h3 class="project-title" data-i18n="proj1_title">PhishNet: Phishing Websites Detection Tool</h3>
     <div class="project-content">
-      <p>
+      <p data-i18n="proj1_body">
         Built this tool using cool ML and data science tricks like feature
         extraction and XGBoost to spot phishing websites before they can do
         any damage.
       </p>
-      <p><a href="https://arxiv.org/abs/2407.04732">View on arXiv</a></p>
+      <p><a href="https://arxiv.org/abs/2407.04732" data-i18n="proj1_link">View on arXiv</a></p>
     </div>
   </div>
 
   <div class="project-dropdown">
-    <h3 class="project-title">Blockchain-based Petition System</h3>
+    <h3 class="project-title" data-i18n="proj2_title">Blockchain-based Petition System</h3>
     <div class="project-content">
-      <p>
+      <p data-i18n="proj2_body">
         Created a blockchain petition system that makes everything more
         transparent, secure, and democratic. No middlemen needed!
       </p>
-      <p><a href="https://arxiv.org/abs/2407.00534">View on arXiv</a></p>
+      <p><a href="https://arxiv.org/abs/2407.00534" data-i18n="proj2_link">View on arXiv</a></p>
     </div>
   </div>
 
-  <h2 id="skills">Technical Skills</h2>
+  <h2 id="skills" data-i18n="skills_heading">Technical Skills</h2>
 
   <div class="skills-grid">
     <div>
-      <strong>AI/ML & Data</strong>
+      <strong data-i18n="skills_ai">AI/ML &amp; Data</strong>
       <p>PyTorch, LLMs, RAG, Stable Diffusion, ControlNet, PostgreSQL, Redis, SQLite, VectorDB (Chroma), BigQuery</p>
     </div>
     <div>
-      <strong>Backend, Cloud & Systems</strong>
+      <strong data-i18n="skills_backend">Backend, Cloud &amp; Systems</strong>
       <p>FastAPI, REST APIs, OpenAPI, SQLAlchemy, Hetzner, GCP, Docker, Kubernetes, Linux, CI/CD, Ray, Sentry</p>
     </div>
     <div>
-      <strong>Programming Languages</strong>
+      <strong data-i18n="skills_langs">Programming Languages</strong>
       <p>Python, SQL, C/C++, R</p>
     </div>
   </div>
 
-  <h2 id="spoken-languages">Spoken Languages</h2>
-  <p>English (C2) • German (B1) • Hindi (C1) • Malayalam (C2)</p>
+  <h2 id="spoken-languages" data-i18n="spoken_heading">Spoken Languages</h2>
+  <p data-i18n="spoken_body">English (C2) • German (B1) • Hindi (C1) • Malayalam (C2)</p>
 
-  <h2 id="hobbies">Hobbies & Interests</h2>
+  <h2 id="hobbies" data-i18n="hobbies_heading">Hobbies &amp; Interests</h2>
 
   <div class="hobbies-grid">
     <div class="hobby-item">
-      <h3>Trekking</h3>
+      <h3 data-i18n="hobby_trekking">Trekking</h3>
     </div>
     <div class="hobby-item">
-      <h3>Football</h3>
+      <h3 data-i18n="hobby_football">Football</h3>
     </div>
     <div class="hobby-item">
-      <h3>Chess</h3>
+      <h3 data-i18n="hobby_chess">Chess</h3>
     </div>
   </div>
 
-  <h2 id="gallery">Gallery</h2>
-  <p>Some cool shots from my treks:</p>
+  <h2 id="gallery" data-i18n="gallery_heading">Gallery</h2>
+  <p data-i18n="gallery_intro">Some cool shots from my treks:</p>
 
   <div class="gallery">
     <figure>
       <img src="gallery/IMG-20250228-WA0003.jpg" alt="Zero Point, border of Kashmir and Ladakh" />
-      <figcaption>Zero Point, Kashmir-Ladakh border</figcaption>
+      <figcaption data-i18n="gallery_cap1">Zero Point, Kashmir-Ladakh border</figcaption>
     </figure>
     <figure>
       <img src="gallery/IMG_1808.jpg" alt="Kheerganga, Himachal Pradesh" style="max-width: 100%" />
-      <figcaption>Kheerganga, Himachal Pradesh</figcaption>
+      <figcaption data-i18n="gallery_cap2">Kheerganga, Himachal Pradesh</figcaption>
     </figure>
   </div>
 
   <!-- Contact -->
-  <h2 id="contact">Contact</h2>
-  <p>Got a cool project or just want to chat about tech? I'm all ears!</p>
+  <h2 id="contact" data-i18n="contact_heading">Contact</h2>
+  <p data-i18n="contact_intro">Got a cool project or just want to chat about tech? I'm all ears!</p>
 
-  <div id="success-message">
+  <div id="success-message" data-i18n="contact_success">
     Thanks! Got your message. I'll get back to you soon.
   </div>
   <form class="contact-form" action="https://getform.io/f/ajjmgyoa" method="POST">
-    <label>Name
-      <input type="text" name="name" placeholder="What should I call you?" required />
+    <label><span data-i18n="form_name">Name</span>
+      <input type="text" name="name" data-i18n-placeholder="form_name_ph" placeholder="What should I call you?"
+        required />
     </label>
-    <label>Email
-      <input type="email" name="email" placeholder="Where can I reach you?" required />
+    <label><span data-i18n="form_email">Email</span>
+      <input type="email" name="email" data-i18n-placeholder="form_email_ph" placeholder="Where can I reach you?"
+        required />
     </label>
-    <label class="full-width">Message
-      <textarea name="message" placeholder="What's on your mind?" rows="16" required></textarea>
+    <label class="full-width"><span data-i18n="form_message">Message</span>
+      <textarea name="message" data-i18n-placeholder="form_msg_ph" placeholder="What's on your mind?" rows="16"
+        required></textarea>
     </label>
-    <button type="submit">Send it my way</button>
+    <button type="submit" data-i18n="form_submit">Send it my way</button>
   </form>
 
-  <p>Or just reach out directly:</p>
+  <p data-i18n="contact_direct">Or just reach out directly:</p>
 
   <p>
     <i class="bi bi-envelope"></i> Email:
@@ -281,12 +300,12 @@
     <a href="https://x.com/kevnantony">x.com/kevnantony</a>
   </p>
 
-  <p style="font-size: 0.7em; color: #666; margin-top: 0.5em">
+  <p style="font-size: 0.7em; color: #666; margin-top: 0.5em" data-i18n="footer_handle">
     I usually go by "kevnantony" on all platforms.
   </p>
 
   <hr />
-  <p>© 2025 Kevin Antony. All rights reserved.</p>
+  <p data-i18n="footer_copy">© 2025 Kevin Antony. All rights reserved.</p>
 
   <p style="font-size: 0.7em; text-align: center; color: #666">
     Based on
@@ -302,6 +321,9 @@
   <!-- Component JavaScript -->
   <script src="js/projects.js"></script>
   <script src="js/contact.js"></script>
+
+  <!-- i18n -->
+  <script src="js/i18n.js"></script>
 </body>
 
 </html>
